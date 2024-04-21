@@ -1,0 +1,29 @@
+.menu-icons ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+}
+.menu {
+  box-shadow: 1px -8px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #fff;
+  max-width: 375px;
+}
+
+.menu-icons .material-symbols-outlined {
+  color: black;
+  cursor: pointer;
+}
+.menu-icons li.active .material-symbols-outlined {
+  color: lightgrey;
+}
