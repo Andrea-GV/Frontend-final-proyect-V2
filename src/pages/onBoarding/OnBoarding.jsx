@@ -11,7 +11,7 @@ export default function OnBoarding() {
       <section className='onBoardingContainer'>
         <SlidesOnBoard></SlidesOnBoard>
       </section>
-      <Link className='a' to="/"><button className='home-butt' >Siguiente</button></Link>
+      <Link className='a' to="/register"><button className='home-butt' >Siguiente</button></Link>
       
     </div>
   )
