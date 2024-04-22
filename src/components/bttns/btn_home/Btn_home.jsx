@@ -1,7 +1,19 @@
-import React from 'react'
+import { useHistory } from "react-router-dom";
 
-export default function Btn_home() {
-    return (
-        <div>Btn_home</div>
-    )
+export default function ScannerResult() {
+  const history = useHistory();
+
+  const handleHomeButtonClick = () => {
+    history.push("/");
+  };
+
+  return (
+    <>
+      {/*... (rest of the code remains the same) */}
+
+      <button className="home-but" onClick={handleHomeButtonClick}>
+        Siguiente
+      </button>
+    </>
+  );
 }

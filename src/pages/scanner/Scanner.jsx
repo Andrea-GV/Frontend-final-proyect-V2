@@ -48,7 +48,7 @@ export default function Scanner() {
           </p>
         </div>
         <div className="scaner">
-          <BarcodeScanner />
+          {/* <BarcodeScanner /> */}
           {/* <QRScanner /> */}
           <QrScanner
             onResult={(result) => detailsProductPage(result)}

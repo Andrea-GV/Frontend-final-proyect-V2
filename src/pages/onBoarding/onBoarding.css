@@ -25,3 +25,18 @@
     height: 100%;
     object-fit: cover;
 }
+.a {
+    text-decoration: none;
+}
+.home-butt {
+    color: #2BBEE2;
+    border: none;
+    padding: 0% 60% 10%;
+    margin: 5%;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    background-color: inherit;
+    font-size: 15px;
+    display: flex;
+}

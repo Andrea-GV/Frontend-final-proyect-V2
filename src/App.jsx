@@ -9,65 +9,47 @@ import Scanner from "./pages/scanner/Scanner";
 import Splash from "./pages/splash/Splash";
 import RegisterFinalPage from "./pages/login/registerFinalPage/RegisterFinalPage";
 import ResgiterPage from "./pages/login/registerPage/ResgiterPage";
-import Profile from "./pages/user/profile/Profile";
+// import Profile from "./pages/user/profile/Profile";
 import AllergyPage from "./pages/login/allergyPage/AllergyPage";
 import Valoracion from "./components/valoracion/Valoracion";
 import OnBoarding from './pages/onBoarding/OnBoarding'
 import ScannerResult from "./pages/scannerResult/ScannerResult";
+import Search from "./pages/search/Search";
+import Diary from "./pages/diary/Diary"
 
 //const navigate = useNavigate()
 
 function App() {
   useEffect(() => {
     //navigate("/OnBoarding")
-
   }, []);
-
 
   return (
     <>
-      
-
       <BrowserRouter>
         <Routes>
           <Route path="/allergy" element={<AllergyPage></AllergyPage>}></Route>
-
-
           <Route path="/" element={<Home></Home>} />
-
           <Route path="/login" element={<LoginPage></LoginPage>} />
-
           <Route path="/register" element={<ResgiterPage></ResgiterPage>} />
-
           <Route
             path="/register/registerContact"
             element={<RegisterContact></RegisterContact>}
           />
-
           <Route
             path="/register/final"
             element={<RegisterFinalPage></RegisterFinalPage>}
           />
-
-          <Route path="/user/profile" element={<Profile></Profile>} />
-
+          {/* <Route path="/user/profile" element={<Profile></Profile>} /> */}
           <Route path="/scanner" element={<Scanner></Scanner>} />
-
           <Route 
           path='/scanner/result' 
           element={<ScannerResult></ScannerResult> } />
-
           <Route path="/splash" element={<Splash></Splash>} />
-
-          {/* <Route path='/allergy' element={ } /> */}
-
           <Route path="/valoracion" element={<Valoracion></Valoracion>} />
-
-
           <Route path="/slides" element={<OnBoarding></OnBoarding>}/>
-
-
-
+          <Route path="/buscar" element={<Search></Search>}></Route>
+          <Route path="/diary" element={<Diary></Diary>} />
         </Routes>
       </BrowserRouter>
     </>

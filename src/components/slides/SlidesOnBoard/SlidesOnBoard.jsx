@@ -66,7 +66,7 @@ export default function SlidesOnBoard() {
             </div>
             <div className="text4">
               <p>
-                Viaja a donde quieras.Tendrás a tu <br></br> disposición un traductor off-line y tu <br></br> informe de alergias e intolerancias<br></br>traducido al idioma local.
+                Viaja a donde quieras. Tendrás a tu <br></br> disposición un traductor off-line y tu <br></br> informe de alergias e intolerancias<br></br>traducido al idioma local.
               </p>
             </div>
           </div>

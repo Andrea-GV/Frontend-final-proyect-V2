@@ -1,0 +1,70 @@
+.s-loginPage {
+
+    &__header {
+
+        width: 100%;
+
+        &__img {
+            width: 100%;
+            height: 250px;
+            position: relative;
+
+            img {
+                max-width: 100%;
+                position: absolute;
+            }
+
+            img:last-child {
+                bottom: 10px;
+                height: 28px;
+                left: 28px;
+            }
+
+
+        }
+
+        &__info {
+            padding: 30px 25px 0px 25px;
+            width: 100%;
+
+
+            h2 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            p {
+                padding-top: 10px;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+
+    }
+
+
+    &__options {
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 20px;
+
+        a {
+            text-decoration: none;
+            color: #2BBEE2;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+
+        a:last-child {
+            padding-top: 40px;
+            font-weight: 300;
+            font-size: 12px;
+        }
+    }
+
+
+}

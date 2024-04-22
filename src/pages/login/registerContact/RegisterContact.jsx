@@ -4,21 +4,21 @@ import Bttn_Back from "../../../components/bttns/bttn_Back/Bttn_Back";
 import "./registerContact.scss";
 
 export default function RegisterContact() {
-    const navigate = useNavigate();
-    const {
-        register,
-        handleSubmit,
-        formState: {isDirty, isValid, errors}
-    } = useForm({
-        mode: "onBlur"
-    });
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { isDirty, isValid, errors }
+  } = useForm({
+    mode: "onBlur"
+  });
 
-  const submit = async ( formData ) => {
-   navigate("/allergy")
+  const submit = async (formData) => {
+    navigate("/allergy")
 
     localStorage.setItem("contactSOSDataString", JSON.stringify(formData));
-    };
-    
+  };
+
 
   return (
     <div className="reg-contact">
@@ -36,37 +36,38 @@ export default function RegisterContact() {
         </div>
       </div>
       <form className="formulario" onSubmit={handleSubmit(submit)}>
+
         <label htmlFor="name"></label>
         <input
           type="text"
           id="name"
           placeholder="Nombre completo de tu contacto"
           {...register("name", { required: false })}
-          />
-        
+        />
+
         <label htmlFor="email"></label>
         <input
           type="text"
           id="email"
           placeholder="Dirección e-mail"
           {...register("email",)}
-            // { required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}
-          />
-          {/* {errors.email && <p style={{ color: "red" }}>El email no es válido</p>} */}
-        
+        // { required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}
+        />
+        {/* {errors.email && <p style={{ color: "red" }}>El email no es válido</p>} */}
+
         <label htmlFor="telefono"></label>
         <input
           type="number"
           id="telefono"
           placeholder="Teléfono móvil"
-          {...register("telefono")}
-            // , { required: true, pattern: /^(\+\d{1,3})?\s?(\d{3,}){1}(\s?\d{2,}){1,2}$/ })}
-          />
-          {/* {errors.telefono && <p style={{ color: "red" }}>El teléfono no es válido</p>}
-         */}
+          {...register("telefono", { required: true, pattern: /^[0-9]+$/ })}
+        // , { required: true, pattern: /^(\+\d{1,3})?\s?(\d{3,}){1}(\s?\d{2,}){1,2}$/ })}
+        />
+        {errors.telefono && <p style={{ color: "red" }}>El teléfono no es válido, dede ser numerico</p>}
+
         <input type="submit" id="guardar" value="Guardar contacto"
-            className={!isDirty || !isValid ? "disabled" : ""}
-            disabled={!isDirty || !isValid} />
+          className={!isDirty || !isValid ? "disabled" : ""}
+          disabled={!isDirty || !isValid} />
 
         {/* <Link to={"/home"}>
           <p id="skip">Registraré mi contacto en otro momento</p>

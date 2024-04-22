@@ -1,3 +1,16 @@
+#foto-P {
+
+    cursor: pointer;
+    width: 100%;
+    // background-color: #2BBEE2;
+    height: 40px;
+    margin-bottom: 6%;
+    border: none;
+    border-bottom: 1px solid rgba(89, 95, 101, 0.452);
+    // align-items: center;
+}
+
+
 .reg-perfil {
     padding: 20px;
     height: 100%;
@@ -48,33 +61,29 @@
             justify-content: center;
             margin: 0 auto;
             text-align: center;
-            label{
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            label {
                 display: flex;
                 flex-direction: column;
             }
-            img{
-                margin: -15px auto 0;
-                width: 70%;
+
+            img {
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: bottom;
             }
+
             p {
                 color: #2BBEE2;
                 font-size: 14px;
                 margin-top: -20px;
             }
-            #foto-P {
-                // width: 150px;
-                // height: 150px;
-                // border: 2px solid #2BBEE2;
-                // border-radius: 999px;
-                // text-align: center;
-                // margin-left: 70px;
-                // box-sizing: border-box;
-                opacity: 0;
-                position: absolute;
-                z-index: 1;
-                cursor: pointer;
-                // align-items: center;
-            }
+
+
 
             .material-symbols-outlined {
                 position: absolute;
@@ -85,7 +94,8 @@
                 color: #ccc;
                 pointer-events: none;
             }
-            input[type="file"]{
+
+            input[type="text"] {
                 cursor: pointer;
             }
         }
@@ -123,7 +133,7 @@
         }
 
         #guardar-P {
-            
+
             margin-top: 50px;
             font-size: 16px;
             font-weight: 600;

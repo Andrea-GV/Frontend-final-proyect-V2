@@ -4,13 +4,21 @@ body {
     border-radius: 10px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
 .home-container {
     display: flex;
     flex-direction: column;
+    min-height: 90vh;
+    justify-content: center;
 }
 
 .home-profile {
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -19,25 +27,28 @@ body {
 }
 
 .photo-profile {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-size: cover;
-    
-    
+
 }
 
 .photo-profile img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 99px;
+    border: 2px solid #2BBEE2;
 }
 
 .home-profile h2 {
     font-family: Montserrat;
     font-size: x-large;
-    
-   
+
+
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     font-size: 40px;
 }
 
@@ -53,6 +64,7 @@ body {
     font-size: x-large;
     font-family: Montserrat;
     text-align: center;
+    color: white;
 }
 
 .scan-button {
@@ -69,7 +81,7 @@ body {
     align-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
 .search-button {
@@ -119,4 +131,27 @@ body {
     justify-content: space-around;
     align-content: center;
     align-items: center;
+}
+
+.sosbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.material-symbols-outlined {
+    color: white;
+}
+
+.diary-button a {
+    text-decoration: none;
+}
+
+.enlace {
+    text-decoration: none;
+}
+
+.sosbutton {
+    text-decoration: none;
 }

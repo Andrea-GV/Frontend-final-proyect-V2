@@ -1,0 +1,67 @@
+.product-info{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.productScanned {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coverImage {
+    width: 200px;
+    height: 200px;
+    margin: 0 24% 5%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.coverImage img {
+    width: 100%;
+}
+
+.ingredientes {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.ingredientes li {
+    padding: 5px;
+}
+.prod-but{
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    width: 80%;
+    height: 40px;
+    background-color: #2BBEE2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.allergies{
+    padding-bottom: 10% ;
+    margin: 5% 10%;
+    /* margin-left: 6%; */
+    h2{
+        text-align: center;
+        font-size: 21px;
+        margin-bottom: 10%;
+    }
+    li{
+        list-style: none;
+        color: tomato;
+    }
+}

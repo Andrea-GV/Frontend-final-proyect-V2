@@ -1,0 +1,41 @@
+.c-loginForm {
+
+    &__container {
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-color: aqua;
+
+    }
+
+    &__label {
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid rgba(89, 95, 101, 0.452);
+    }
+
+    &__button {
+
+
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        height: 40px;
+        background-color: #2BBEE2;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+
+    }
+}

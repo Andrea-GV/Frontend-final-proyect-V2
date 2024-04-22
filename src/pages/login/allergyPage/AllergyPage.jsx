@@ -3,6 +3,7 @@ import './allergyPage.css'
 import axios from 'axios'
 import Bttn_Back from '../../../components/bttns/bttn_Back/Bttn_Back';
 import { useNavigate } from 'react-router-dom';
+import { get } from 'jquery';
 
 
 export default function AllergyPage() {
@@ -29,7 +30,6 @@ export default function AllergyPage() {
 
   const createUser = async () => {
 
-  
 
     const SOSdataContact = await
       axios.post(`https://node-basic-wheat.vercel.app/sosContact/register`, dataContactSOS);
@@ -57,18 +57,40 @@ export default function AllergyPage() {
 
   }
 
+
   const handleAllergy = (element) => {
-
-
 
     const arrData = [...arrAllergies];
 
     arrData.push(element.target.title);
 
-
-
     setArrAllergies(arrData);
 
+    console.log(element.target.className);
+    element.target.classList.add("selected")
+
+  }
+
+
+
+
+
+
+  const reset = () => {
+
+    //console.log("dentro", arrAllergies);
+    const delet = arrAllergies.splice(0, arrAllergies.length)
+    //console.log("boor", delet);
+    // console.log("segunda", arrAllergies);
+    //console.log("etnro");
+    setArrAllergies(arrAllergies)
+
+    const allSelect = document.querySelectorAll('.allergy');
+
+    for (let item of allSelect) {
+      console.log(allSelect);
+      item.classList.remove("selected")
+    }
   }
 
 
@@ -78,12 +100,15 @@ export default function AllergyPage() {
 
   }, []);
 
+
   // console.log(users)
   return (
     <>
-      <Bttn_Back />
-
       <div className='allergies-body'>
+        <div className='w-100 pb-3'>
+          <Bttn_Back />
+        </div>
+
         <div className='text-h1'>
           <h1>Confirma tu selección</h1>
         </div>
@@ -97,19 +122,21 @@ export default function AllergyPage() {
         <div className='allergies-buttons'>
           {allergies.map((allergy, index) => (
 
-            <div
+            <button
               className='allergy'
               key={index}
               onClick={(e) => handleAllergy(e)}
               title={allergy._id}
+            >{allergy.name}
 
-            >
-              <p>{allergy.name}</p>
-              <img src={`IMG/` + allergy.image} alt={allergy.name}></img>
-            </div>))}
+              {/* <img src={`IMG/` + allergy.image} alt={allergy.name}></img> */}
+            </button>))}
 
         </div>
 
+        <button
+          className='confirmation-button'
+          onClick={() => reset()}>Reset</button>
 
         <button
           className='confirmation-button'
@@ -117,6 +144,7 @@ export default function AllergyPage() {
         >
           Confirmar
         </button>
+
       </div>
     </>
 

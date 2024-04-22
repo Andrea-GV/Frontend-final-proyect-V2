@@ -1,6 +1,8 @@
 //import React, { useEffect } from 'react'
 //import axios from 'axios';
 
+import "./_formLogin.scss"
+
 import { useForm } from 'react-hook-form';
 import { API } from '../../../context/postContext';
 import { useNavigate } from 'react-router-dom';
@@ -28,32 +30,40 @@ export default function FormLogin() {
 
     return (
 
-        <div>
+        <main>
 
-            <form onSubmit={handleSubmit(onSubmit)} >
-                <fieldset>
-                    <legend></legend>
 
-                    <label >
-                        <input
-                            type="text"
-                            placeholder='Email'
-                            {...register("email")} />
-                    </label>
 
-                    <label >
-                        <input
-                            type="text"
-                            placeholder='Password'
-                            {...register("password")} />
-                    </label>
+            <div className="c-loginForm__container">
 
-                </fieldset>
+                <form onSubmit={handleSubmit(onSubmit)} >
+                    <fieldset>
+                        <legend></legend>
 
-                <button>enviar</button>
+                        <label className="c-loginForm__label" >
+                            <input className="c-loginForm__input"
+                                type="text"
+                                placeholder='Email'
+                                {...register("email")} />
+                        </label>
 
-            </form>
+                        <label className="c-loginForm__label" >
+                            <input className="c-loginForm__input"
+                                type="text"
+                                placeholder='Password'
+                                {...register("password")} />
+                        </label>
 
-        </div>
+                    </fieldset>
+
+                    <button
+                        className="c-loginForm__button">Entrar</button>
+
+                </form>
+
+            </div>
+
+
+        </main>
     )
 }
